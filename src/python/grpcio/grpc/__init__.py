@@ -2167,6 +2167,7 @@ __all__ = (
 # Here to maintain backwards compatibility; avoid using these in new code!
 try:
     import grpc_tools
+    import grpc_tools.protoc  # See https://github.com/grpc/grpc/issues/26631
     sys.modules.update({'grpc.tools': grpc_tools})
 except ImportError:
     pass
